@@ -19,6 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.3",
     "mongoose-unique-validator": "^3.0.0",
+    "streamifier": "^0.1.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

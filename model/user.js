@@ -1,9 +1,10 @@
 const mongoose = require('mongoose')
 const uniqueValidator = require('mongoose-unique-validator')
 
+//userid will be a randomly generated string, files will be array of paths to the files, which will be of type string
 const userSchema = new mongoose.Schema({
     userId: {type: String, required: true, unique: true},
-    files: [String]
+    files: {type: [String], default: []}
   })
 
 userSchema.set('toJSON', {
