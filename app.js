@@ -5,8 +5,10 @@ const newTokensRouter = require('./controller/newTokens')
 const middleware = require('./utils/middleware')
 const listAllFilesRouter = require('./controller/listAllFiles')
 const upDownRouter = require('./controller/upDown')
+const createAudioRouter = require('./controller/createAudio')
 const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload');
+
 
 const app = express()
 
@@ -28,6 +30,7 @@ app.use(middleware.tokenAuthenticator)
 
 app.use('/my_upload_file', listAllFilesRouter)
 app.use(upDownRouter)
+app.use('/text_file_to_audio', createAudioRouter)
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
