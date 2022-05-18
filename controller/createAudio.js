@@ -8,7 +8,7 @@ const { v1: uuidv1 } = require('uuid')
 createAudioRouter.post('/', async (req, res) => 
 {
     //extracting text path from body. check if textpath exists and starts with public/upload
-    const textPath = req.body.file_path;
+    const textPath = req.body.file_path
     if(!textPath)
     {
         return res.status(404).json({"status": "error", "message": "file_path not found"})
